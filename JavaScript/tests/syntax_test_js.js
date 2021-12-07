@@ -866,11 +866,12 @@ const test = ({a, b, c=()=>({active:false}) }) => {};
 //                                   ^ constant.language
 //                                          ^ punctuation.section.block.end
 
-([a,
-  b]) => { return x; }
-//    ^^^^^^^^^^^^^^^^ meta.function
-//    ^^ keyword.declaration.function.arrow
-//         ^^^^^^ meta.block keyword.control.flow
+const test = ([a,
+//    ^ entity.name.function
+               b]) => { return x; };
+//                 ^^^^^^^^^^^^^^^^ meta.function
+//                 ^^ keyword.declaration.function.arrow
+//                      ^^^^^^ meta.block keyword.control.flow
 
 (
     ()
